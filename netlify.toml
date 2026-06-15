@@ -8,6 +8,51 @@
   force = true
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/referencement/"
+  to = "/referencement.html"
   status = 200
+
+[[redirects]]
+  from = "/referencement"
+  to = "/referencement/"
+  status = 301
+
+[[redirects]]
+  from = "/reseaux-sociaux/"
+  to = "/reseaux-sociaux.html"
+  status = 200
+
+[[redirects]]
+  from = "/reseaux-sociaux"
+  to = "/reseaux-sociaux/"
+  status = 301
+
+[[redirects]]
+  from = "/a-propos/"
+  to = "/a-propos.html"
+  status = 200
+
+[[redirects]]
+  from = "/a-propos"
+  to = "/a-propos/"
+  status = 301
+
+[[redirects]]
+  from = "/tarifs/"
+  to = "/tarifs.html"
+  status = 200
+
+[[redirects]]
+  from = "/tarifs"
+  to = "/tarifs/"
+  status = 301
+
+[[redirects]]
+  from = "/contact/"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 301
