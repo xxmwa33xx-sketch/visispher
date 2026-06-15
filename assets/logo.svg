@@ -1,0 +1,35 @@
+<svg width="100%" viewBox="0 0 680 340" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Visispher — logo</title>
+  <defs>
+    <mask id="imagine-text-gaps-3x84ji" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="680" height="340" fill="white"/>
+      <rect x="203.96" y="197.20" width="272.05" height="44.65" fill="black" rx="2"/>
+      <rect x="238.88" y="244.76" width="202.25" height="15.55" fill="black" rx="2"/>
+    </mask>
+  </defs>
+  <rect x="40" y="20" width="600" height="300" rx="16" fill="#0a0f1a"/>
+  <polygon points="340,55 400,88 400,152 340,185 280,152 280,88" fill="none" stroke="#1a4a7a" stroke-width="1" stroke-dasharray="4 3"/>
+  <ellipse cx="340" cy="170" rx="110" ry="38" fill="none" stroke="#1d6fa8" stroke-width="1.5" transform="rotate(-18 340 170)"/>
+  <ellipse cx="340" cy="170" rx="95" ry="32" fill="none" stroke="#2585c8" stroke-width="0.8" opacity="0.5" transform="rotate(40 340 170)"/>
+  <rect x="421" y="143" width="7" height="7" rx="1" fill="#2a9fd6" transform="rotate(-18 424 146)"/>
+  <rect x="252" y="190" width="7" height="7" rx="1" fill="#1a6fa8" transform="rotate(-18 255 193)"/>
+  <rect x="386" y="120" width="5" height="5" rx="1" fill="#3ab0e8" transform="rotate(40 388 122)" opacity="0.8"/>
+  <path d="M268 130 L252 130 L252 210 L268 210" fill="none" stroke="#1d6fa8" stroke-width="1.2" stroke-linecap="round" mask="url(#imagine-text-gaps-3x84ji)"/>
+  <path d="M412 130 L428 130 L428 210 L412 210" fill="none" stroke="#1d6fa8" stroke-width="1.2" stroke-linecap="round" mask="url(#imagine-text-gaps-3x84ji)"/>
+  <polygon points="340,138 358,148 358,168 340,178 322,168 322,148" fill="#0d2a45" stroke="#1a5a8a" stroke-width="1"/>
+  <circle cx="340" cy="158" r="22" fill="#0a2035"/>
+  <circle cx="340" cy="158" r="18" fill="#0d3050"/>
+  <circle cx="340" cy="158" r="14" fill="#1255a0"/>
+  <circle cx="340" cy="158" r="10" fill="#1a7ad4"/>
+  <circle cx="340" cy="158" r="6" fill="#2a9fd6"/>
+  <circle cx="340" cy="158" r="3" fill="#5cc8f0"/>
+  <circle cx="336" cy="154" r="2" fill="#a0e0ff" opacity="0.7"/>
+  <path d="M58 38 L58 52 L72 52" fill="none" stroke="#1d6fa8" stroke-width="1" stroke-linecap="round"/>
+  <path d="M622 38 L622 52 L608 52" fill="none" stroke="#1d6fa8" stroke-width="1" stroke-linecap="round"/>
+  <path d="M58 302 L58 288 L72 288" fill="none" stroke="#1d6fa8" stroke-width="1" stroke-linecap="round"/>
+  <path d="M622 302 L622 288 L608 288" fill="none" stroke="#1d6fa8" stroke-width="1" stroke-linecap="round"/>
+  <text x="340" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="8" fill="#ffffff">VISISPHER</text>
+  <text x="340" y="256" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="4" fill="#4a9fd4">WEB DESIGN &amp; DIGITAL</text>
+  <line x1="240" y1="243" x2="290" y2="243" stroke="#1d6fa8" stroke-width="0.5"/>
+  <line x1="390" y1="243" x2="440" y2="243" stroke="#1d6fa8" stroke-width="0.5"/>
+</svg>
