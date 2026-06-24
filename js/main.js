@@ -112,7 +112,7 @@ if (burger && mobileNav) {
   const path = window.location.pathname;
   const page = path === '/' || path === '' ? '/' : path.split('/').pop();
 
-  document.querySelectorAll('.site-nav a, .mobile-nav a').forEach(a => {
+  document.querySelectorAll('.site-nav a, .mobile-nav a, .hero-nav a, .nav-pill a').forEach(a => {
     const href = a.getAttribute('href') || '';
     const isHome = (href === '/' && (page === '/' || page === 'index.html' || page === ''));
     const isPage = href !== '/' && href.split('/').pop() === page;
@@ -210,4 +210,37 @@ if (rotatingEl) {
       }, 420);
     }, 3200);
   }
+}
+
+/* 9. Floating nav pill (apparaît une fois le hero quitté)
+   ============================================================ */
+const heroSection = document.getElementById('hero');
+const navPill = document.querySelector('.nav-pill');
+
+if (heroSection && navPill) {
+  const heroObserver = new IntersectionObserver(([entry]) => {
+    navPill.classList.toggle('visible', !entry.isIntersecting);
+  }, { threshold: 0 });
+  heroObserver.observe(heroSection);
+}
+
+/* 10. Transitions entre pages ("plonger dans l'écran")
+   ============================================================ */
+if (!prefersReduced) {
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('http') && !href.startsWith('mailto') && !href.startsWith('tel') && !href.startsWith('#')) {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.classList.add('page-out');
+        setTimeout(() => { window.location.href = href; }, 400);
+      });
+    }
+  });
+
+  window.addEventListener('pageshow', () => {
+    document.body.classList.remove('page-out');
+    document.body.classList.add('page-in');
+    setTimeout(() => document.body.classList.remove('page-in'), 400);
+  });
 }
