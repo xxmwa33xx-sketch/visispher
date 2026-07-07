@@ -212,17 +212,98 @@ if (rotatingEl) {
   }
 }
 
-/* 9. Floating nav pill (apparaît une fois le hero quitté)
+/* 9. Tunnel canvas (hero — warp-speed stars)
    ============================================================ */
-const heroSection = document.getElementById('hero');
-const navPill = document.querySelector('.nav-pill');
+(function initTunnel() {
+  const canvas = document.getElementById('tunnel');
+  if (!canvas || prefersReduced) return;
 
-if (heroSection && navPill) {
-  const heroObserver = new IntersectionObserver(([entry]) => {
-    navPill.classList.toggle('visible', !entry.isIntersecting);
-  }, { threshold: 0 });
-  heroObserver.observe(heroSection);
-}
+  const ctx = canvas.getContext('2d');
+  const COUNT = 250;
+  const FOCAL = 320;
+
+  function resize() {
+    canvas.width  = canvas.offsetWidth  || window.innerWidth;
+    canvas.height = canvas.offsetHeight || window.innerHeight;
+    ctx.fillStyle = '#071327';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function makestar() {
+    return {
+      x:  (Math.random() - 0.5) * 2,
+      y:  (Math.random() - 0.5) * 2,
+      z:  Math.random() * 0.9 + 0.1,
+      pz: null
+    };
+  }
+
+  const stars = Array.from({ length: COUNT }, makestar);
+
+  function loop() {
+    const speed = (window.tunnelSpeed || 1) * 0.004;
+    const w = canvas.width, h = canvas.height;
+    const cx = w / 2, cy = h / 2;
+
+    ctx.fillStyle = 'rgba(7,19,39,0.3)';
+    ctx.fillRect(0, 0, w, h);
+
+    for (const s of stars) {
+      const pz = s.pz !== null ? s.pz : s.z;
+
+      s.z -= speed;
+
+      if (s.z <= 0.001) {
+        Object.assign(s, makestar());
+        s.z  = 0.9 + Math.random() * 0.1;
+        s.pz = null;
+        continue;
+      }
+
+      const sx  = cx + (s.x / s.z)  * FOCAL;
+      const sy  = cy + (s.y / s.z)  * FOCAL;
+      const spx = cx + (s.x / pz)   * FOCAL;
+      const spy = cy + (s.y / pz)   * FOCAL;
+
+      if (sx < -w || sx > 2 * w || sy < -h || sy > 2 * h) {
+        Object.assign(s, makestar());
+        s.z  = 0.9 + Math.random() * 0.1;
+        s.pz = null;
+        continue;
+      }
+
+      const depth   = 1 - s.z;
+      const opacity = Math.min(1, depth * 2);
+      const size    = Math.max(0.4, depth * 2.8);
+
+      const r   = Math.round(79  + (255 - 79)  * depth);
+      const g   = Math.round(209 + (255 - 209) * depth);
+      const col = `rgba(${r},${g},255,${opacity.toFixed(2)})`;
+
+      if (s.pz !== null) {
+        ctx.beginPath();
+        ctx.moveTo(spx, spy);
+        ctx.lineTo(sx, sy);
+        ctx.strokeStyle = col;
+        ctx.lineWidth   = size * 0.6;
+        ctx.stroke();
+      }
+
+      ctx.beginPath();
+      ctx.arc(sx, sy, size * 0.5, 0, Math.PI * 2);
+      ctx.fillStyle = col;
+      ctx.fill();
+
+      s.pz = s.z;
+    }
+
+    requestAnimationFrame(loop);
+  }
+
+  loop();
+})();
 
 /* 10. Transitions entre pages ("plonger dans l'écran")
    ============================================================ */
@@ -232,8 +313,9 @@ if (!prefersReduced) {
     if (href && !href.startsWith('http') && !href.startsWith('mailto') && !href.startsWith('tel') && !href.startsWith('#')) {
       link.addEventListener('click', e => {
         e.preventDefault();
+        window.tunnelSpeed = 4;
         document.body.classList.add('page-out');
-        setTimeout(() => { window.location.href = href; }, 400);
+        setTimeout(() => { window.tunnelSpeed = 1; window.location.href = href; }, 400);
       });
     }
   });

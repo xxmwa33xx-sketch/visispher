@@ -17,6 +17,10 @@
 </head>
 <body class="home">
 
+  <a href="/" class="site-logo-fixed" aria-label="Visispher — Accueil">
+    <img src="/assets/Logo_visispher.png" alt="Visispher">
+  </a>
+
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="header__inner">
@@ -52,44 +56,14 @@
 
     <!-- HERO -->
     <section class="hero" id="hero" aria-label="Présentation Visispher">
-      <!-- Particles -->
-      <div class="hero__particles" id="particles" aria-hidden="true"></div>
+      <canvas id="tunnel" aria-hidden="true"></canvas>
 
-      <div class="hero__bg" aria-hidden="true">
-        <div class="orbital">
-          <div class="orbital__ring orbital__ring--1"></div>
-          <div class="orbital__ring orbital__ring--2"></div>
-          <div class="orbital__ring orbital__ring--3"></div>
-          <div class="orbital__dot orbital__dot--1"></div>
-          <div class="orbital__dot orbital__dot--2"></div>
-        </div>
-        <div class="hero__glow hero__glow--1"></div>
-        <div class="hero__glow hero__glow--2"></div>
-      </div>
-
-      <a href="/" class="hero__logo-abs" aria-label="Visispher — Accueil">
-        <img src="/assets/Logo_visispher.png" alt="Visispher">
-      </a>
-
-      <div class="hero__layout">
-        <div class="hero__text">
-          <p class="hero__badge">Agence Web · Belgique</p>
-          <h1 class="hero__title">Votre agence de création<br>de sites <span class="glow-word">internet</span></h1>
-          <p class="hero__subtitle"><span id="rotatingSubtitle"></span></p>
-        </div>
-
+      <div class="hero__content">
         <div class="hero__icon-wrap">
           <img src="/assets/icone_de_site.png" alt="" class="hero__icon" aria-hidden="true">
         </div>
-
-        <nav class="hero-nav" aria-label="Navigation principale">
-          <a href="/">Accueil</a>
-          <a href="/referencement.html">Référencement</a>
-          <a href="/reseaux-sociaux.html">Réseaux sociaux</a>
-          <a href="/a-propos.html">À propos</a>
-          <a href="/tarifs.html">Tarifs</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
+        <h1 class="hero__title">Votre agence de création<br>de sites <span class="glow-word">internet</span></h1>
+        <p class="hero__subtitle"><span id="rotatingSubtitle"></span></p>
       </div>
 
       <div class="hero__cta">
