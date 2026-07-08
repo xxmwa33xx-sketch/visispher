@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/png" href="/assets/icone_de_site.png">
+  <link rel="apple-touch-icon" href="/assets/icone_de_site.png">
 </head>
 <body>
 
@@ -154,24 +156,18 @@
 
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__logo">
-            <svg width="120" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" aria-label="Visispher" role="img">
-              <rect x="40" y="20" width="600" height="300" rx="16" fill="#0a0f1a"/>
-              <circle cx="340" cy="158" r="14" fill="#1255a0"/>
-              <circle cx="340" cy="158" r="10" fill="#1a7ad4"/>
-              <circle cx="340" cy="158" r="6" fill="#2a9fd6"/>
-              <circle cx="340" cy="158" r="3" fill="#5cc8f0"/>
-              <text x="340" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="8" fill="#ffffff">VISISPHER</text>
-              <text x="340" y="256" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="4" fill="#4a9fd4">WEB DESIGN &amp; DIGITAL</text>
-            </svg>
-          </div>
-          <p class="footer__tagline">Agence belge de création de sites internet pour les indépendants, restaurateurs et commerces locaux.</p>
+    <div class="footer__inner">
+      <div class="footer__cols">
+        <div class="footer__col footer__col--brand">
+          <a href="/" aria-label="Visispher — Accueil">
+            <img src="/assets/Logo_visispher.png" alt="Visispher" class="footer__logo-img">
+          </a>
+          <p class="footer__tagline">Agence belge de création de sites internet.</p>
+          <p class="footer__contact-line"><a href="tel:+32491044021">+32 491 04 40 21</a></p>
+          <p class="footer__contact-line"><a href="mailto:guillaumedunand204@gmail.com">guillaumedunand204@gmail.com</a></p>
         </div>
-        <div>
-          <p class="footer__heading">Navigation</p>
+        <div class="footer__col">
+          <p class="footer__col-title">Navigation</p>
           <nav class="footer__links" aria-label="Navigation pied de page">
             <a href="/">Accueil</a>
             <a href="/referencement.html">Référencement</a>
@@ -181,16 +177,14 @@
             <a href="/contact.html">Contact</a>
           </nav>
         </div>
-        <div>
-          <p class="footer__heading">Contact</p>
-          <p class="footer__contact-item"><a href="tel:+32491044021">+32 491 04 40 21</a></p>
-          <p class="footer__contact-item"><a href="mailto:guillaumedunand204@gmail.com">guillaumedunand204@gmail.com</a></p>
-          <p class="footer__contact-item">Belgique &amp; à distance</p>
+        <div class="footer__col">
+          <p class="footer__col-title">Contact</p>
+          <p class="footer__col-text">Disponible en Belgique et à distance. Réponse sous 24h.</p>
+          <a href="/contact.html" class="footer__cta">Démarrer un projet →</a>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>VISISPHER © 2026 — Tous droits réservés</span>
-        <span>Belgique</span>
+        <span>VISISPHER © 2026 — Tous droits réservés · Belgique</span>
       </div>
     </div>
   </footer>
