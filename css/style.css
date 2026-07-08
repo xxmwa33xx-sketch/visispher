@@ -933,32 +933,23 @@ p  { max-width: 68ch; }
   transform: translateY(-6px);
 }
 
-.realisation-card__image {
-  position: relative;
-  height: 200px;
+.realisation-card .card-image-wrapper {
+  height: 380px;
   overflow: hidden;
+  position: relative;
 }
 
-.realisation-card__image img {
+.realisation-card .card-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
+  height: auto;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 6s ease;
+  transform: translateY(0);
 }
 
-.realisation-card:hover .realisation-card__image img { transform: scale(1.03); }
-
-.realisation-card__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(79,209,255,0);
-  transition: background 0.4s ease;
-  pointer-events: none;
+.realisation-card:hover .card-image {
+  transform: translateY(-30%);
 }
-
-.realisation-card:hover .realisation-card__overlay { background: rgba(79,209,255,0.12); }
 
 .realisation-card__image--placeholder {
   background: radial-gradient(ellipse at center, #0d2f66, #071327);
@@ -978,9 +969,24 @@ p  { max-width: 68ch; }
 .realisation-card__body { padding: 1.5rem 1.75rem; }
 
 .realisation-card__name { font-size: 1.05rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.25rem; }
-.realisation-card__type { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.9rem; }
-.realisation-card__link { font-size: 0.88rem; font-weight: 600; color: #4fd1ff; text-decoration: none; }
-.realisation-card__link:hover { text-decoration: underline; }
+.realisation-card__type { font-size: 0.85rem; color: var(--color-text-muted); }
+
+.btn-realisation {
+  display: inline-block;
+  padding: 10px 28px;
+  border: 1px solid rgba(79, 209, 255, 0.4);
+  border-radius: 999px;
+  color: #4fd1ff;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-realisation:hover {
+  background: rgba(79, 209, 255, 0.08);
+  box-shadow: 0 0 16px rgba(79, 209, 255, 0.2);
+}
 
 /* 14. Pricing
    ============================================================ */
