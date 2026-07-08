@@ -909,6 +909,79 @@ p  { max-width: 68ch; }
 .testimonial__text   { font-size: 0.92rem; color: var(--color-text-muted); font-style: italic; margin-bottom: 1rem; max-width: none; }
 .testimonial__author { font-size: 0.85rem; font-weight: 600; color: var(--color-text); }
 
+/* 13b. Réalisations
+   ============================================================ */
+.realisations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) { .realisations-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.realisation-card {
+  background: rgba(13, 47, 102, 0.2);
+  border: 1px solid rgba(79,209,255,0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.realisation-card:hover {
+  border-color: rgba(79,209,255,0.4);
+  box-shadow: 0 12px 40px rgba(79,209,255,0.15);
+  transform: translateY(-6px);
+}
+
+.realisation-card__image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.realisation-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.realisation-card:hover .realisation-card__image img { transform: scale(1.03); }
+
+.realisation-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(79,209,255,0);
+  transition: background 0.4s ease;
+  pointer-events: none;
+}
+
+.realisation-card:hover .realisation-card__overlay { background: rgba(79,209,255,0.12); }
+
+.realisation-card__image--placeholder {
+  background: radial-gradient(ellipse at center, #0d2f66, #071327);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.realisation-card__placeholder-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  opacity: 0.4;
+}
+
+.realisation-card__body { padding: 1.5rem 1.75rem; }
+
+.realisation-card__name { font-size: 1.05rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.25rem; }
+.realisation-card__type { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0.9rem; }
+.realisation-card__link { font-size: 0.88rem; font-weight: 600; color: #4fd1ff; text-decoration: none; }
+.realisation-card__link:hover { text-decoration: underline; }
+
 /* 14. Pricing
    ============================================================ */
 .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: start; }
