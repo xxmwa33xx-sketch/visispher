@@ -1,7 +1,7 @@
 {
   "name": "visispher",
   "version": "1.0.0",
-  "description": "Visispher — Agence de création de sites internet en Belgique",
+  "description": "Visispher — Création de sites internet pour indépendants et petites entreprises (La Réunion, Belgique, France)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Visispher | Parlons de votre projet</title>
+  <meta name="description" content="Contactez Visispher pour discuter de votre projet de site internet. Réponse rapide, devis personnalisé, sans engagement." />
+  <meta property="og:title" content="Contact — Visispher" />
+  <meta property="og:description" content="Envoyez-nous votre projet. Guillaume vous répond rapidement, sans jargon et sans engagement." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://visispher.com/contact/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact — Visispher" />
+  <meta name="twitter:description" content="Parlons de votre projet — sans jargon et sans engagement." />
+  <link rel="canonical" href="https://visispher.com/contact/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/png" href="/assets/icone_de_site.png">
+  <link rel="apple-touch-icon" href="/assets/icone_de_site.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://visispher.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://visispher.com/contact/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <canvas id="network-field" aria-hidden="true"></canvas>
+
+  <a href="/" class="site-logo-fixed" aria-label="Visispher — Accueil">
+    <img src="/assets/Logo_visispher.png" alt="Visispher">
+  </a>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header__inner">
+      <a href="/" class="header__logo" aria-label="Visispher — Accueil">
+        <img src="/assets/Logo_visispher.png" alt="Visispher" class="header__logo-img">
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="/">Accueil</a>
+        <a href="/referencement/">Référencement</a>
+        <a href="/reseaux-sociaux/">Réseaux sociaux</a>
+        <a href="/realisations/">Réalisations</a>
+        <a href="/a-propos/">À propos</a>
+        <a href="/tarifs/">Tarifs</a>
+        <a href="/contact/" class="nav-cta">Contact</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+    <a href="/">Accueil</a>
+    <a href="/referencement/">Référencement</a>
+    <a href="/reseaux-sociaux/">Réseaux sociaux</a>
+    <a href="/realisations/">Réalisations</a>
+    <a href="/a-propos/">À propos</a>
+    <a href="/tarifs/">Tarifs</a>
+    <a href="/contact/" class="nav-cta">Contact</a>
+  </nav>
+
+  <nav class="nav-pill" aria-label="Navigation">
+    <a href="/">Accueil</a>
+    <a href="/referencement/">Référencement</a>
+    <a href="/reseaux-sociaux/">Réseaux sociaux</a>
+    <a href="/realisations/">Réalisations</a>
+    <a href="/a-propos/">À propos</a>
+    <a href="/tarifs/">Tarifs</a>
+    <a href="/contact/" class="nav-cta">Contact</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="hero__badge">Prise de contact</p>
+        <h1>Parlons de votre projet</h1>
+        <p>Décrivez-nous votre activité et votre besoin. On revient vers vous rapidement, sans jargon et sans engagement.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" aria-labelledby="contact-titre">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- FORM -->
+          <div class="fade-in">
+            <h2 id="contact-titre" style="margin-bottom:1.75rem;font-size:1.5rem;">Votre demande</h2>
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify
+              class="contact-form"
+              novalidate
+            >
+              <input type="hidden" name="form-name" value="contact" />
+
+              <div class="form-group">
+                <label for="nom">Prénom &amp; Nom <span aria-hidden="true" style="color:var(--color-accent);">*</span></label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  placeholder="Jean Dupont"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="societe">Nom de la société / établissement</label>
+                <input
+                  type="text"
+                  id="societe"
+                  name="societe"
+                  placeholder="Brasserie du Centre"
+                  autocomplete="organization"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email <span aria-hidden="true" style="color:var(--color-accent);">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="votre@email.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="formule">Formule souhaitée</label>
+                <select id="formule" name="formule">
+                  <option value="">-- Sélectionner une formule --</option>
+                  <option value="Essentiel">Essentiel — à partir de 600€</option>
+                  <option value="Professionnel">Professionnel — à partir de 1 500€</option>
+                  <option value="Business">Business — à partir de 2 900€</option>
+                  <option value="Autre">Autre / Je ne sais pas encore</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Description du projet <span aria-hidden="true" style="color:var(--color-accent);">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Décrivez votre activité, vos besoins, vos objectifs..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;font-size:1rem;padding:0.9rem;">
+                Envoyer ma demande
+              </button>
+            </form>
+          </div>
+
+          <!-- INFO -->
+          <aside class="contact-info fade-in fade-in-delay-2" aria-label="Coordonnées Visispher">
+            <h2 class="contact-info__heading">Coordonnées</h2>
+
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#4fd1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </span>
+              <div>
+                <p class="contact-info__label">Téléphone</p>
+                <p class="contact-info__value"><a href="tel:+32491044021">+32 491 04 40 21</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#4fd1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <div>
+                <p class="contact-info__label">Email</p>
+                <p class="contact-info__value"><a href="mailto:guillaumedunand204@gmail.com">guillaumedunand204@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <span class="contact-info__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#4fd1ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              </span>
+              <div>
+                <p class="contact-info__label">Zone d'intervention</p>
+                <p class="contact-info__value">La Réunion, Belgique &amp; à distance dans l'espace francophone</p>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="encart">
+              <h4>Délai de réponse</h4>
+              <p>Je réponds en général dans les 24h. Pour toute urgence, n'hésitez pas à appeler directement.</p>
+            </div>
+
+            <div class="encart" style="margin-top:1rem;">
+              <h4>Vous ne savez pas par où commencer ?</h4>
+              <p>Décrivez simplement votre activité dans le message — pas besoin d'arriver avec un cahier des charges, on structure le projet ensemble.</p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__cols">
+        <div class="footer__col footer__col--brand">
+          <a href="/" aria-label="Visispher — Accueil">
+            <img src="/assets/Logo_visispher.png" alt="Visispher" class="footer__logo-img">
+          </a>
+          <p class="footer__tagline">Création de sites internet pour indépendants et petites entreprises.</p>
+          <p class="footer__contact-line"><a href="tel:+32491044021">+32 491 04 40 21</a></p>
+          <p class="footer__contact-line"><a href="mailto:guillaumedunand204@gmail.com">guillaumedunand204@gmail.com</a></p>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Navigation</p>
+          <nav class="footer__links" aria-label="Navigation pied de page">
+            <a href="/">Accueil</a>
+            <a href="/referencement/">Référencement</a>
+            <a href="/reseaux-sociaux/">Réseaux sociaux</a>
+            <a href="/realisations/">Réalisations</a>
+            <a href="/a-propos/">À propos</a>
+            <a href="/tarifs/">Tarifs</a>
+            <a href="/contact/">Contact</a>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Contact</p>
+          <p class="footer__col-text">Basé à La Réunion et en Belgique, disponible à distance dans l'espace francophone. Réponse sous 24h.</p>
+          <a href="/contact/" class="footer__cta">Démarrer un projet →</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>VISISPHER © 2026 — Tous droits réservés</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
